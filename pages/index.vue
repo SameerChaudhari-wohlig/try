@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar color="cyan-lighten-1">
+    <v-app-bar color="cyan-lighten-1" color="cyan-lighten-1">
       <v-toolbar-title>Instagram </v-toolbar-title>
       <nuxt-link class="edit" to="/"><v-btn>Home</v-btn></nuxt-link>
       <nuxt-link class="edit" to="/home"><v-btn>User</v-btn></nuxt-link>
@@ -123,3 +123,4 @@ fetch;
   color: black;
 }
 </style>
+
