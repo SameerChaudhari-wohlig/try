@@ -1,13 +1,12 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar>
+    <v-app-bar color="cyan-lighten-1">
       <v-toolbar-title>Instagram </v-toolbar-title>
-      <nuxt-link class="edit" to="'../pages/home.vue"><v-btn>Home</v-btn></nuxt-link>  
-        <nuxt-link class="edit" to="'../pages/about.vue"><v-btn>About</v-btn></nuxt-link>  
+      <nuxt-link class="edit" to="/"><v-btn>Home</v-btn></nuxt-link>
+      <nuxt-link class="edit" to="/home"><v-btn>User</v-btn></nuxt-link>
+      <nuxt-link class="edit" to="/about"><v-btn>About</v-btn></nuxt-link>
       <v-text-field placeholder="Search ..." v-model="search"></v-text-field>
-     
     </v-app-bar>
-
     <v-main class="bg-grey-lighten-2">
       <v-container fluid>
         <v-row>
@@ -21,7 +20,7 @@
                 sm="6"
                 lg="3"
               >
-                <v-card class="mx-auto" >
+                <v-card class="mx-auto">
                   <!-- <v-img :src="post.node.edge_sidecar_to_children.edges[0].node
 
                   .edge_media_to_tagged_user.edges[0].node.user.profile_pic_url" height="200px" cover></v-img> -->
@@ -66,7 +65,6 @@ let posts = ref([]);
 posts = data.body.edge_liked_by.edges;
 // console.log(posts, "post ove");
 
-
 // const url =
 //   "https://instagram47.p.rapidapi.com/public_post_likers?shortcode=CHLXcX-h-Px";
 // const options = {
@@ -100,11 +98,6 @@ posts = data.body.edge_liked_by.edges;
 //   }
 // });
 
-
-
-
-
-
 const filteredProducts = computed(() => {
   if (search.value) {
     // console.log("inside if");
@@ -126,7 +119,7 @@ fetch;
 
 <style>
 .edit {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 </style>

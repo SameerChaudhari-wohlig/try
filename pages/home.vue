@@ -1,11 +1,11 @@
 <template>
   <v-card class="mx-auto" max-width="100%">
     <v-toolbar color="cyan-lighten-1">
-      <v-btn variant="text" icon="mdi-menu"></v-btn>
-
+      <!-- <v-btn variant="text" icon="mdi-menu"></v-btn> -->
       <v-toolbar-title>Instagram</v-toolbar-title>
-
-      <v-spacer></v-spacer>
+      <nuxt-link class="edit" to="/"><v-btn>Home</v-btn></nuxt-link>
+      <nuxt-link class="edit" to="/home"><v-btn>User</v-btn></nuxt-link>
+      <nuxt-link class="edit" to="/about"><v-btn>About</v-btn></nuxt-link>
       <v-text-field placeholder="Search ..." v-model="search"></v-text-field>
       <!-- <v-btn v-model="search" variant="text" icon="mdi-magnify" ></v-btn> -->
     </v-toolbar>
@@ -33,7 +33,6 @@ let posts = ref([]);
 // User = body.user;
 
 // const url =  "https://instagram47.p.rapidapi.com/search?search=ig_sameer_tweet"
-
 
 // const options = {
 //   method: "GET",
